@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+
+    /*add user style*/
+    .header{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 40px;
+    color: rgb(199, 190, 179);
+    letter-spacing: 2px;
+    text-shadow: none;
+}
+
+
+.add-user{
+    background-color: rgba(29, 38, 113, 0.797);
+    color: rgb(206, 206, 206);
+    display: inline-block;
+    padding: 50px;
+}
+.sub-header{
+    margin-bottom: 30px;
+}
+.btn{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(234, 234, 234);
+}
+
+/*common in all*/
+input{
+    background-color: rgb(177, 184, 184);
+}
+label,input{
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+body{
+    background-color: rgb(33, 32, 32);
+}
+form{
+    margin-bottom: 40px;
+}
+
+/* get user styles */
+.get-user{
+    background-color: rgba(29, 38, 113, 0.797);
+    color: rgb(206, 206, 206);
+    display: inline-block;
+    padding: 62px;
+}
+
+/* remove user styles */
+.remove-user{
+    background-color: rgba(29, 38, 113, 0.797);
+    color: rgb(206, 206, 206);
+    display: inline-block;
+    padding: 62px;
+}
+
+
+/* all user styles */
+.all-user{
+    background-color: rgba(29, 38, 113, 0.797);
+    color: rgb(206, 206, 206);
+    display: inline-block;
+    padding: 104px;
+}
+
+</style>
+</head>
+<body>
+   <h1 class="header">CRUD APPLICATION</h1>
+   <center>
+   <form class="add-user" action="/adduser" method="post">
+       <h2 class="sub-header">Add User Details</h2>
+       <label for="userid" class="add-label">User ID</label>
+       <input type="text" name="userid" required>
+       <br>
+       <label for="username" class="add-label">Name</label>
+       <input type="text" name="username" required>
+       <br>
+       <label for="dob" class="add-label">DOB</label>
+       <input type="date" name="dob" required>
+       <br>
+       <label for="occupation">Occupation</label>
+       <input type="text" name="occupation" required>
+       <br>
+      
+       <button type="submit" class="btn">Add User</button>
+   </form>
+</center>
+
+<center>
+<form class="get-user" action="/getuser" method="post">
+    <h2 class="sub-header">Get User Details</h2>
+    <label for="getuserid" class="add-label">User ID</label>
+    <input type="text" name="getuserid" required><br>
+    <button type="submit" class="btn">Get User</button>
+</form>
+</center>
+
+<center>
+    <form class="remove-user" action="/removeuser" method="post">
+        <h2 class="sub-header">Remove User Details</h2>
+        <label for="getuserid" class="add-label">User ID</label>
+        <input type="text" name="removeuser" required><br>
+        <button type="submit" class="btn">Remove User</button>
+    </form>
+    </center>
+
+
+    <center>
+        <form class="all-user" action="/alluser" method="post">
+            <h2 class="sub-header">All User Details</h2>
+            <button type="submit" class="btn">All Details</button>
+        </form>
+        </center>
+
+</body>
+</html>
